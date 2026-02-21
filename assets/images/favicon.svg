@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .bubble { fill: #273582; }
+      .letter { fill: #ffffff; font-family: 'Georgia', serif; font-size: 22px; font-weight: normal; }
+    </style>
+  </defs>
+  <path class="bubble" d="M5,3 h40 a3,3 0 0 1 3,3 v28 a3,3 0 0 1 -3,3 h-30 l-12,12 v-12 h-0 a3,3 0 0 1 -3,-3 v-28 a3,3 0 0 1 3,-3 z"/>
+  <text x="25" y="27" class="letter" text-anchor="middle" dominant-baseline="middle">A</text>
+</svg>

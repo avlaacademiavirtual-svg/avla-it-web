@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AVLA - Academia Virtual de Lenguas Aplicadas. Clases de italiano y español personalizadas, traducciones certificadas. Un puente entre Argentina e Italia.">
+    <meta name="keywords" content="clases italiano, clases español, traducciones italiano español, AVLA, aprender italiano, María José Terragni">
+    <meta name="author" content="AVLA - María José Terragni">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AVLA - Donde el idioma se convierte en puente">
+    <meta property="og:description" content="Clases de italiano y español con alma. Traducciones con precisión. Una experiencia que conecta Argentina e Italia.">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    <meta property="og:url" content="https://avla.academy">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AVLA - Donde el idioma se convierte en puente">
+    <meta name="twitter:description" content="Clases de italiano y español con alma. Traducciones con precisión.">
+    
+    <title>AVLA | Clases de Italiano y Español | Traducciones Certificadas</title>
+    
+    <!-- Preconnect Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato:wght@300;400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader__logo">
+            <svg viewBox="0 0 100 80" class="loader__svg">
+                <path class="loader__bubble" d="M10,5 h80 a5,5 0 0 1 5,5 v50 a5,5 0 0 1 -5,5 h-70 l-15,15 v-15 h-0 a5,5 0 0 1 -5,-5 v-50 a5,5 0 0 1 5,-5 z"/>
+                <text x="50" y="42" class="loader__text">AVLA</text>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <svg viewBox="0 0 120 90" class="nav__logo-svg">
+                    <path class="nav__bubble" d="M10,5 h100 a5,5 0 0 1 5,5 v55 a5,5 0 0 1 -5,5 h-85 l-20,20 v-20 h-0 a5,5 0 0 1 -5,-5 v-55 a5,5 0 0 1 5,-5 z"/>
+                    <text x="60" y="48" class="nav__logo-text">AVLA</text>
+                </svg>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#inicio" class="nav__link active">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#historia" class="nav__link">Mi Historia</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#servicios" class="nav__link">Servicios</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#testimonios" class="nav__link">Testimonios</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#agenda" class="nav__link">Agenda</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contacto" class="nav__link nav__link--cta">Contacto</a>
+                    </li>
+                </ul>
+                
+                <button class="nav__close" id="nav-close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <button class="nav__toggle" id="nav-toggle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <span class="hero__subtitle reveal-up">Academia Virtual de Lenguas Aplicadas</span>
+                    <h1 class="hero__title reveal-up">Donde el idioma se convierte en <span class="text-gradient">puente</span></h1>
+                    <p class="hero__description reveal-up">
+                        Aprende italiano o español con una experiencia que va más allá de la gramática. 
+                        Clases personalizadas, traducciones certificadas y una conexión auténtica entre Argentina e Italia.
+                    </p>
+                    <div class="hero__buttons reveal-up">
+                        <a href="#agenda" class="btn btn--primary">
+                            Reservar una clase de prueba
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#servicios" class="btn btn--outline">Conocer servicios</a>
+                    </div>
+                </div>
+                
+                <div class="hero__image reveal-right">
+                    <div class="hero__image-wrapper">
+                        <img src="assets/images/maria-hero.png" alt="María José Terragni - Fundadora de AVLA" class="hero__photo" loading="eager">
+                        <div class="hero__image-decoration"></div>
+                    </div>
+                    <div class="hero__badge">
+                        <span class="hero__badge-icon">🇦🇷</span>
+                        <span class="hero__badge-text">Argentina</span>
+                        <span class="hero__badge-connector">↔</span>
+                        <span class="hero__badge-icon">🇮🇹</span>
+                        <span class="hero__badge-text">Italia</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero__scroll">
+                <a href="#historia" class="hero__scroll-link">
+                    <span>Descubre más</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="hero__bg-decoration"></div>
+        </section>
+
+        <!-- Historia Section -->
+        <section class="historia section" id="historia">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle reveal-up">Conóceme</span>
+                    <h2 class="section__title reveal-up">Y esta soy yo... <span class="text-accent">María</span></h2>
+                </div>
+                
+                <div class="historia__content">
+                    <div class="historia__intro reveal-up">
+                        <div class="historia__photo-main">
+                            <img src="assets/images/maria-intro.png" alt="María José Terragni" loading="lazy">
+                            <div class="historia__doodle historia__doodle--smile">
+                                <svg viewBox="0 0 50 50">
+                                    <circle cx="25" cy="25" r="23" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="17" cy="20" r="2" fill="currentColor"/>
+                                    <circle cx="33" cy="20" r="2" fill="currentColor"/>
+                                    <path d="M15 32 Q25 40 35 32" fill="none" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="historia__timeline">
+                        <div class="timeline__item reveal-left">
+                            <div class="timeline__images">
+                                <img src="assets/images/historia-infancia.png" alt="María de pequeña" loading="lazy">
+                            </div>
+                            <div class="timeline__content">
+                                <p class="timeline__text">
+                                    Desde chica estuve rodeada del idioma: mis papás me enviaron a una escuela italiana. 
+                                    Después dije "Bueno, estudio un poquito más..."
+                                </p>
+                                <span class="timeline__spoiler">Spoiler: nunca paré. 😂</span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline__item reveal-right">
+                            <div class="timeline__images">
+                                <img src="assets/images/historia-titulo.png" alt="María con su título universitario" loading="lazy">
+                            </div>
+                            <div class="timeline__content">
+                                <div class="timeline__doodle timeline__doodle--bulb">
+                                    <svg viewBox="0 0 40 50">
+                                        <path d="M20 5 L20 0 M5 20 L0 20 M35 20 L40 20 M8 8 L4 4 M32 8 L36 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                                        <path d="M12 45 h16 M14 48 h12" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="20" cy="25" r="12" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    </svg>
+                                </div>
+                                <p class="timeline__text">
+                                    Y sin darme cuenta seguí estudiando hasta convertirme en 
+                                    <strong>traductora italiano-español</strong> por la Universidad Nacional de Córdoba.
+                                </p>
+                                <div class="timeline__doodle timeline__doodle--book">
+                                    <svg viewBox="0 0 50 40">
+                                        <path d="M5 35 L5 5 Q25 0 25 5 L25 35 Q25 30 5 35" fill="none" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M45 35 L45 5 Q25 0 25 5 L25 35 Q25 30 45 35" fill="none" stroke="currentColor" stroke-width="2"/>
+                                        <path d="M10 12 L20 10 M10 18 L20 16 M10 24 L20 22" stroke="currentColor" stroke-width="1"/>
+                                        <path d="M40 12 L30 10 M40 18 L30 16 M40 24 L30 22" stroke="currentColor" stroke-width="1"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="historia__message reveal-up">
+                        <blockquote class="historia__quote">
+                            <p>El italiano no es solo un idioma que aprendí, es parte de quien soy.</p>
+                        </blockquote>
+                        <p class="historia__final">
+                            <strong>AVLA</strong> nació de esa experiencia: no es solo una academia de idiomas, 
+                            es un espacio donde el aprendizaje se mezcla con la cultura, donde cada clase es 
+                            un viaje entre dos mundos que amo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="historia__bg-element"></div>
+        </section>
+
+        <!-- Servicios Section -->
+        <section class="servicios section" id="servicios">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle reveal-up">Qué ofrezco</span>
+                    <h2 class="section__title reveal-up">Servicios pensados para <span class="text-accent">vos</span></h2>
+                </div>
+                
+                <div class="servicios__grid">
+                    <article class="servicio-card reveal-up" data-delay="0">
+                        <div class="servicio-card__icon">
+                            <svg viewBox="0 0 60 60">
+                                <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <text x="30" y="24" text-anchor="middle" font-size="12" fill="currentColor">🇮🇹</text>
+                                <text x="30" y="42" text-anchor="middle" font-size="10" fill="currentColor" font-weight="600">IT</text>
+                            </svg>
+                        </div>
+                        <h3 class="servicio-card__title">Clases de Italiano</h3>
+                        <p class="servicio-card__description">
+                            Desde tus primeras palabras hasta conversaciones fluidas. Clases adaptadas a tu ritmo, 
+                            preparación para exámenes CILS/CELI, o simplemente para disfrutar la <em>dolce vita</em> 
+                            en su idioma original.
+                        </p>
+                        <ul class="servicio-card__features">
+                            <li>Todos los niveles (A1-C2)</li>
+                            <li>Preparación CILS/CELI</li>
+                            <li>Conversación y cultura</li>
+                            <li>100% personalizado</li>
+                        </ul>
+                        <a href="#agenda" class="servicio-card__link">
+                            Comenzar
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="servicio-card reveal-up" data-delay="100">
+                        <div class="servicio-card__icon">
+                            <svg viewBox="0 0 60 60">
+                                <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <text x="30" y="24" text-anchor="middle" font-size="12" fill="currentColor">🇪🇸</text>
+                                <text x="30" y="42" text-anchor="middle" font-size="10" fill="currentColor" font-weight="600">ES</text>
+                            </svg>
+                        </div>
+                        <h3 class="servicio-card__title">Clases de Español</h3>
+                        <p class="servicio-card__description">
+                            Para quienes quieren conectar con Latinoamérica. Un español vivo, práctico, 
+                            con el calor de Argentina y la precisión de una traductora profesional.
+                        </p>
+                        <ul class="servicio-card__features">
+                            <li>Español rioplatense</li>
+                            <li>Enfoque comunicativo</li>
+                            <li>Para italianos y extranjeros</li>
+                            <li>Cultura latinoamericana</li>
+                        </ul>
+                        <a href="#agenda" class="servicio-card__link">
+                            Comenzar
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="servicio-card reveal-up" data-delay="200">
+                        <div class="servicio-card__icon">
+                            <svg viewBox="0 0 60 60">
+                                <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M18 20 h24 M18 28 h20 M18 36 h16 M18 44 h12" stroke="currentColor" stroke-width="2"/>
+                                <path d="M40 38 l6 6 l-6 6" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="servicio-card__title">Traducciones</h3>
+                        <p class="servicio-card__description">
+                            Traducciones certificadas español-italiano con validez legal. 
+                            Legalizaciones, apostillas y acompañamiento en todo el proceso documental 
+                            entre Argentina e Italia.
+                        </p>
+                        <ul class="servicio-card__features">
+                            <li>Traducción pública certificada</li>
+                            <li>Legalizaciones oficiales</li>
+                            <li>Apostillas</li>
+                            <li>Asesoramiento completo</li>
+                        </ul>
+                        <a href="#contacto" class="servicio-card__link">
+                            Consultar
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios Section -->
+        <section class="testimonios section" id="testimonios">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle reveal-up">Testimonios</span>
+                    <h2 class="section__title reveal-up">Lo que dicen mis <span class="text-accent">estudiantes</span></h2>
+                </div>
+                
+                <div class="testimonios__wrapper">
+                    <div class="testimonios__slider" id="testimonios-slider">
+                        <div class="testimonio-card">
+                            <div class="testimonio-card__header">
+                                <div class="testimonio-card__avatar">
+                                    <img src="assets/images/testimonio-agus.png" alt="Agus" loading="lazy">
+                                </div>
+                                <div class="testimonio-card__info">
+                                    <h4 class="testimonio-card__name">Agus</h4>
+                                    <div class="testimonio-card__stars">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                    </div>
+                                </div>
+                                <div class="testimonio-card__badge">
+                                    <span>A</span>
+                                </div>
+                            </div>
+                            <blockquote class="testimonio-card__text">
+                                Recomendadísima 100% ❤️ y desde la comodidad de mi casa, con horarios súper flexibles, 
+                                Majo es lo más del mundo, con una paciencia de oro, divertida y exigente como me gusta. 
+                                ¡Gracias!! Soy muy feliz con mis clases de italiano, me terminé de enamorar del idioma ❤️
+                            </blockquote>
+                        </div>
+                        
+                        <div class="testimonio-card">
+                            <div class="testimonio-card__header">
+                                <div class="testimonio-card__avatar">
+                                    <img src="assets/images/testimonio-ilsu.png" alt="Ilsu" loading="lazy">
+                                </div>
+                                <div class="testimonio-card__info">
+                                    <h4 class="testimonio-card__name">Ilsu</h4>
+                                    <div class="testimonio-card__stars">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                    </div>
+                                </div>
+                                <div class="testimonio-card__badge">
+                                    <span>A</span>
+                                </div>
+                            </div>
+                            <blockquote class="testimonio-card__text">
+                                Avla crea un ambiente acogedor in cui mi sento libera di fare errori e imparare da essi. 
+                                La sua passione, la sua pazienza e il suo entusiasmo rendono ogni lezione un vero piacere. 
+                                Consiglio vivamente Avla a chiunque desideri imparare l'italiano in modo efficace e piacevole!
+                            </blockquote>
+                        </div>
+                        
+                        <div class="testimonio-card">
+                            <div class="testimonio-card__header">
+                                <div class="testimonio-card__avatar">
+                                    <img src="assets/images/testimonio-carolina.png" alt="Carolina" loading="lazy">
+                                </div>
+                                <div class="testimonio-card__info">
+                                    <h4 class="testimonio-card__name">Carolina</h4>
+                                    <div class="testimonio-card__stars">
+                                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                    </div>
+                                </div>
+                                <div class="testimonio-card__badge">
+                                    <span>A</span>
+                                </div>
+                            </div>
+                            <blockquote class="testimonio-card__text">
+                                Le lezioni con Majo sono e continuano a essere spettacolari! 
+                                Majo ha una pazienza, una dedizione e un amore per l'insegnamento che si sentono in ogni momento. 
+                                Mi fa sentire a mio agio e mi ha fatto innamorare della lingua italiana. 
+                                La consiglio al 100% perché riesce sempre a motivarmi e a spronarmi a migliorare!
+                            </blockquote>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonios__controls">
+                        <button class="testimonios__btn testimonios__btn--prev" id="prev-testimonial" aria-label="Testimonio anterior">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 12H5M12 19l-7-7 7-7"/>
+                            </svg>
+                        </button>
+                        <div class="testimonios__dots" id="testimonios-dots">
+                            <button class="testimonios__dot active" data-index="0" aria-label="Ver testimonio 1"></button>
+                            <button class="testimonios__dot" data-index="1" aria-label="Ver testimonio 2"></button>
+                            <button class="testimonios__dot" data-index="2" aria-label="Ver testimonio 3"></button>
+                        </div>
+                        <button class="testimonios__btn testimonios__btn--next" id="next-testimonial" aria-label="Siguiente testimonio">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonios__decoration">
+                <div class="testimonios__bubble testimonios__bubble--1"></div>
+                <div class="testimonios__bubble testimonios__bubble--2"></div>
+            </div>
+        </section>
+
+        <!-- Agenda Section -->
+        <section class="agenda section" id="agenda">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle reveal-up">Agenda</span>
+                    <h2 class="section__title reveal-up">Reserva tu <span class="text-accent">primera clase</span></h2>
+                    <p class="section__description reveal-up">
+                        30 minutos para conocernos y diseñar tu camino en el idioma. 
+                        Sin compromiso, solo conversación.
+                    </p>
+                </div>
+                
+                <div class="agenda__content reveal-up">
+                    <div class="agenda__info">
+                        <div class="agenda__feature">
+                            <div class="agenda__feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <div class="agenda__feature-text">
+                                <h4>Flexible</h4>
+                                <p>Horarios adaptados a tu zona horaria</p>
+                            </div>
+                        </div>
+                        
+                        <div class="agenda__feature">
+                            <div class="agenda__feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 10l-4 4l-2-2"/>
+                                    <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                    <path d="M16 2v4M8 2v4M3 10h18"/>
+                                </svg>
+                            </div>
+                            <div class="agenda__feature-text">
+                                <h4>Sin compromiso</h4>
+                                <p>Clase de prueba gratuita de 30 minutos</p>
+                            </div>
+                        </div>
+                        
+                        <div class="agenda__feature">
+                            <div class="agenda__feature-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <div class="agenda__feature-text">
+                                <h4>Personalizado</h4>
+                                <p>Diseñamos juntos tu plan de estudio</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="agenda__cta">
+                        <div class="agenda__cta-content">
+                            <div class="agenda__cta-icon">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                            </div>
+                            <h3 class="agenda__cta-title">¿Lista/o para empezar?</h3>
+                            <p class="agenda__cta-text">Escribime por WhatsApp y coordinamos tu primera clase de prueba gratuita.</p>
+                            <a href="https://wa.me/393518712897?text=Hola%20María!%20Me%20interesa%20tomar%20clases%20de%20italiano%20con%20AVLA.%20¿Podemos%20coordinar%20una%20clase%20de%20prueba?" 
+                               target="_blank" 
+                               rel="noopener" 
+                               class="btn btn--whatsapp">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                                Escribir por WhatsApp
+                            </a>
+                            <span class="agenda__cta-number">+39 351 871 2897</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section class="contacto section" id="contacto">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle reveal-up">Contacto</span>
+                    <h2 class="section__title reveal-up">¿Tenés alguna <span class="text-accent">pregunta</span>?</h2>
+                    <p class="section__description reveal-up">
+                        Escribime y te respondo lo antes posible. Estoy acá para ayudarte.
+                    </p>
+                </div>
+                
+                <div class="contacto__content">
+                    <form class="contacto__form reveal-left" id="contact-form">
+                        <div class="form__group">
+                            <label for="name" class="form__label">Nombre</label>
+                            <input type="text" id="name" name="name" class="form__input" placeholder="Tu nombre" required>
+                            <span class="form__error" id="name-error"></span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email</label>
+                            <input type="email" id="email" name="email" class="form__input" placeholder="tu@email.com" required>
+                            <span class="form__error" id="email-error"></span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="subject" class="form__label">Asunto</label>
+                            <select id="subject" name="subject" class="form__input form__select">
+                                <option value="">Selecciona una opción</option>
+                                <option value="italiano">Clases de Italiano</option>
+                                <option value="espanol">Clases de Español</option>
+                                <option value="traduccion">Traducciones</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form__group">
+                            <label for="message" class="form__label">Mensaje</label>
+                            <textarea id="message" name="message" class="form__input form__textarea" placeholder="Contame en qué puedo ayudarte..." rows="5" required></textarea>
+                            <span class="form__error" id="message-error"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary btn--full">
+                            <span>Enviar mensaje</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="form__success" id="form-success">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <path d="M22 4L12 14.01l-3-3"/>
+                            </svg>
+                            <p>¡Mensaje enviado! Te respondo pronto.</p>
+                        </div>
+                    </form>
+                    
+                    <div class="contacto__info reveal-right">
+                        <div class="contacto__card">
+                            <h3 class="contacto__card-title">Conectemos</h3>
+                            
+                            <a href="mailto:hola@avla.academy" class="contacto__link">
+                                <div class="contacto__link-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <path d="M22 6l-10 7L2 6"/>
+                                    </svg>
+                                </div>
+                                <div class="contacto__link-text">
+                                    <span class="contacto__link-label">Email</span>
+                                    <span class="contacto__link-value">hola@avla.academy</span>
+                                </div>
+                            </a>
+                            
+                            <a href="https://wa.me/393518712897" target="_blank" rel="noopener" class="contacto__link contacto__link--whatsapp">
+                                <div class="contacto__link-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                    </svg>
+                                </div>
+                                <div class="contacto__link-text">
+                                    <span class="contacto__link-label">WhatsApp</span>
+                                    <span class="contacto__link-value">+39 351 871 2897</span>
+                                </div>
+                            </a>
+                            
+                            <a href="https://instagram.com/avla.idiomas" target="_blank" rel="noopener" class="contacto__link contacto__link--instagram">
+                                <div class="contacto__link-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                        <circle cx="12" cy="12" r="4"/>
+                                        <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <div class="contacto__link-text">
+                                    <span class="contacto__link-label">Instagram</span>
+                                    <span class="contacto__link-value">@avla.idiomas</span>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="contacto__map">
+                            <div class="contacto__map-visual">
+                                <div class="map__point map__point--argentina">
+                                    <span>🇦🇷</span>
+                                    <div class="map__pulse"></div>
+                                </div>
+                                <div class="map__line"></div>
+                                <div class="map__point map__point--italia">
+                                    <span>🇮🇹</span>
+                                    <div class="map__pulse"></div>
+                                </div>
+                            </div>
+                            <p class="contacto__map-text">Conectando Argentina e Italia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <a href="#" class="footer__logo">
+                        <svg viewBox="0 0 50 50" class="footer__logo-svg">
+                            <path class="footer__bubble" d="M5,3 h40 a3,3 0 0 1 3,3 v28 a3,3 0 0 1 -3,3 h-30 l-12,12 v-12 h-0 a3,3 0 0 1 -3,-3 v-28 a3,3 0 0 1 3,-3 z"/>
+                            <text x="25" y="26" class="footer__logo-text">A</text>
+                        </svg>
+                    </a>
+                    <p class="footer__tagline">Un puente entre culturas, un hogar para tu idioma.</p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__nav">
+                        <a href="#inicio">Inicio</a>
+                        <a href="#historia">Mi Historia</a>
+                        <a href="#servicios">Servicios</a>
+                        <a href="#testimonios">Testimonios</a>
+                        <a href="#agenda">Agenda</a>
+                        <a href="#contacto">Contacto</a>
+                    </div>
+                    
+                    <div class="footer__social">
+                        <a href="https://instagram.com/avla.idiomas" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/393518712897" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:hola@avla.academy" aria-label="Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <path d="M22 6l-10 7L2 6"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2026 AVLA - Academia Virtual de Lenguas Aplicadas. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+/* ===========================================
+   AVLA - Animaciones y Efectos
+   =========================================== */
+
+/* ---- Reveal Animations Base ---- */
+.reveal-up,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+    opacity: 0;
+    transition: 
+        opacity var(--transition-slower) var(--ease-out-expo),
+        transform var(--transition-slower) var(--ease-out-expo);
+}
+
+.reveal-up {
+    transform: translateY(40px);
+}
+
+.reveal-left {
+    transform: translateX(-40px);
+}
+
+.reveal-right {
+    transform: translateX(40px);
+}
+
+.reveal-scale {
+    transform: scale(0.9);
+}
+
+.reveal-up.revealed,
+.reveal-left.revealed,
+.reveal-right.revealed,
+.reveal-scale.revealed {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* ---- Staggered Animations ---- */
+[data-delay="100"] {
+    transition-delay: 100ms;
+}
+
+[data-delay="200"] {
+    transition-delay: 200ms;
+}
+
+[data-delay="300"] {
+    transition-delay: 300ms;
+}
+
+[data-delay="400"] {
+    transition-delay: 400ms;
+}
+
+/* ---- Parallax Effect ---- */
+.parallax {
+    will-change: transform;
+}
+
+/* ---- Floating Animation ---- */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+.floating-slow {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* ---- Pulse Animation ---- */
+@keyframes pulse-soft {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.02);
+        opacity: 0.9;
+    }
+}
+
+.pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+}
+
+/* ---- Gradient Animation ---- */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-gradient {
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
+}
+
+/* ---- Shine Effect ---- */
+@keyframes shine {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shine 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* ---- Hover Lift Effect ---- */
+.hover-lift {
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ---- Link Underline Animation ---- */
+.link-animated {
+    position: relative;
+    display: inline-block;
+}
+
+.link-animated::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width var(--transition-base) var(--ease-out-expo);
+}
+
+.link-animated:hover::after {
+    width: 100%;
+}
+
+/* ---- Button Ripple Effect ---- */
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-ripple::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-ripple:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* ---- Card Tilt Effect (opcional, activar con JS) ---- */
+.tilt-effect {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.tilt-effect:hover {
+    transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+}
+
+/* ---- Typewriter Effect ---- */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--color-marian-blue);
+    }
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid var(--color-marian-blue);
+    white-space: nowrap;
+    animation: 
+        typing 3s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+}
+
+/* ---- Fade In/Out Classes ---- */
+.fade-in {
+    animation: fadeIn var(--transition-base) ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut var(--transition-base) ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* ---- Slide Animations ---- */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-up {
+    animation: slideInUp var(--transition-slow) var(--ease-out-expo) forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft var(--transition-slow) var(--ease-out-expo) forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight var(--transition-slow) var(--ease-out-expo) forwards;
+}
+
+/* ---- Scale Pop Animation ---- */
+@keyframes scalePop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.scale-pop {
+    animation: scalePop var(--transition-slow) var(--ease-out-back) forwards;
+}
+
+/* ---- Wiggle Animation ---- */
+@keyframes wiggle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-3deg);
+    }
+    75% {
+        transform: rotate(3deg);
+    }
+}
+
+.wiggle:hover {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+/* ---- Drawing Animation for SVG ---- */
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.draw-svg {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 2s ease forwards;
+}
+
+/* ---- Blob Animation ---- */
+@keyframes blob {
+    0%, 100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+}
+
+.blob {
+    animation: blob 8s ease-in-out infinite;
+}
+
+/* ---- Marquee Animation (for possible testimonials) ---- */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee {
+    animation: marquee 30s linear infinite;
+}
+
+.marquee:hover {
+    animation-play-state: paused;
+}
+
+/* ---- Focus States for Accessibility ---- */
+*:focus-visible {
+    outline: 3px solid var(--color-marian-blue);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--color-marian-blue);
+    outline-offset: 3px;
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal-up,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale {
+        opacity: 1;
+        transform: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ---- Text Selection ---- */
+::selection {
+    background: var(--color-thistle);
+    color: var(--color-primary-dark);
+}
+
+::-moz-selection {
+    background: var(--color-thistle);
+    color: var(--color-primary-dark);
+}
+
+/* ---- Scrollbar Styling ---- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-alice-blue);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-thistle);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-alice-blue) var(--color-background);
+}

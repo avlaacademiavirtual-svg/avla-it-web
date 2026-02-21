@@ -1,0 +1,151 @@
+:root {
+    /* ===========================================
+       AVLA - Variables CSS
+       Basado en el Manual de Identidad Visual
+       =========================================== */
+
+    /* ---- Paleta de Colores Institucionales ---- */
+    
+    /* Isabelline - Fondo principal cálido */
+    --color-isabelline: #F0EEE9;
+    --color-isabelline-rgb: 240, 238, 233;
+    
+    /* Alice Blue - Fondo secundario fresco */
+    --color-alice-blue: #D3DDE7;
+    --color-alice-blue-rgb: 211, 221, 231;
+    
+    /* Pear - Acento vibrante */
+    --color-pear: #D5DB46;
+    --color-pear-rgb: 213, 219, 70;
+    
+    /* Thistle - Acento suave lavanda */
+    --color-thistle: #C9B3D8;
+    --color-thistle-rgb: 201, 179, 216;
+    
+    /* Marian Blue - Azul institucional */
+    --color-marian-blue: #273582;
+    --color-marian-blue-rgb: 39, 53, 130;
+    
+    /* Space Cadet - Azul oscuro principal */
+    --color-space-cadet: #222248;
+    --color-space-cadet-rgb: 34, 34, 72;
+
+    /* ---- Colores Semánticos ---- */
+    --color-primary: var(--color-marian-blue);
+    --color-primary-dark: var(--color-space-cadet);
+    --color-secondary: var(--color-thistle);
+    --color-accent: var(--color-pear);
+    
+    --color-background: var(--color-isabelline);
+    --color-background-alt: var(--color-alice-blue);
+    --color-surface: #FFFFFF;
+    
+    --color-text: var(--color-space-cadet);
+    --color-text-light: rgba(34, 34, 72, 0.7);
+    --color-text-muted: rgba(34, 34, 72, 0.5);
+    --color-text-inverse: #FFFFFF;
+
+    /* ---- Tipografías ---- */
+    --font-heading: 'DM Serif Display', Georgia, serif;
+    --font-subheading: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* ---- Tamaños de Fuente (Fluid Typography) ---- */
+    --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+    --text-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+    --text-base: clamp(1rem, 0.925rem + 0.375vw, 1.125rem);
+    --text-lg: clamp(1.125rem, 1rem + 0.625vw, 1.375rem);
+    --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.625rem);
+    --text-2xl: clamp(1.5rem, 1.25rem + 1.25vw, 2.25rem);
+    --text-3xl: clamp(1.875rem, 1.5rem + 1.875vw, 3rem);
+    --text-4xl: clamp(2.25rem, 1.75rem + 2.5vw, 4rem);
+    --text-5xl: clamp(3rem, 2.25rem + 3.75vw, 5.5rem);
+
+    /* ---- Line Heights ---- */
+    --leading-none: 1;
+    --leading-tight: 1.15;
+    --leading-snug: 1.3;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.65;
+    --leading-loose: 1.8;
+
+    /* ---- Font Weights ---- */
+    --weight-light: 300;
+    --weight-normal: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* ---- Espaciado ---- */
+    --space-3xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.375rem);
+    --space-2xs: clamp(0.5rem, 0.45rem + 0.25vw, 0.625rem);
+    --space-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+    --space-sm: clamp(1rem, 0.925rem + 0.375vw, 1.25rem);
+    --space-md: clamp(1.5rem, 1.375rem + 0.625vw, 1.875rem);
+    --space-lg: clamp(2rem, 1.75rem + 1.25vw, 2.75rem);
+    --space-xl: clamp(3rem, 2.5rem + 2.5vw, 4.5rem);
+    --space-2xl: clamp(4rem, 3.25rem + 3.75vw, 6rem);
+    --space-3xl: clamp(6rem, 5rem + 5vw, 9rem);
+
+    /* ---- Container ---- */
+    --container-max: 1200px;
+    --container-padding: clamp(1rem, 0.5rem + 2.5vw, 2rem);
+
+    /* ---- Border Radius ---- */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.625rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-2xl: 2rem;
+    --radius-full: 9999px;
+
+    /* ---- Shadows ---- */
+    --shadow-sm: 0 1px 2px rgba(34, 34, 72, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(34, 34, 72, 0.07), 0 2px 4px -1px rgba(34, 34, 72, 0.04);
+    --shadow-lg: 0 10px 15px -3px rgba(34, 34, 72, 0.08), 0 4px 6px -2px rgba(34, 34, 72, 0.04);
+    --shadow-xl: 0 20px 25px -5px rgba(34, 34, 72, 0.1), 0 10px 10px -5px rgba(34, 34, 72, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(34, 34, 72, 0.2);
+    --shadow-glow: 0 0 40px rgba(39, 53, 130, 0.15);
+    --shadow-glow-accent: 0 0 40px rgba(213, 219, 70, 0.3);
+
+    /* ---- Transitions ---- */
+    --transition-fast: 150ms ease;
+    --transition-base: 300ms ease;
+    --transition-slow: 500ms ease;
+    --transition-slower: 700ms ease;
+    
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-in-out-circ: cubic-bezier(0.85, 0, 0.15, 1);
+
+    /* ---- Z-Index Scale ---- */
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-fixed: 300;
+    --z-modal-backdrop: 400;
+    --z-modal: 500;
+    --z-popover: 600;
+    --z-tooltip: 700;
+    --z-loader: 1000;
+
+    /* ---- Header Height ---- */
+    --header-height: 80px;
+    --header-height-scrolled: 70px;
+}
+
+/* ---- Dark Mode Support (opcional para futuro) ---- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Mantener colores claros por ahora - la marca es luminosa */
+    }
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-fast: 0ms;
+        --transition-base: 0ms;
+        --transition-slow: 0ms;
+        --transition-slower: 0ms;
+    }
+}
