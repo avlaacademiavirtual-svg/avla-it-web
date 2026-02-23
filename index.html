@@ -509,51 +509,114 @@
                 </div>
                 
                 <div class="contacto__content">
-                    <form class="contacto__form reveal-left" id="contact-form">
-                        <div class="form__group">
-                            <label for="name" class="form__label">Nombre</label>
-                            <input type="text" id="name" name="name" class="form__input" placeholder="Tu nombre" required>
-                            <span class="form__error" id="name-error"></span>
+                    <!-- Chat simulado estilo Google Meet -->
+                    <div class="meet-chat reveal-left" id="meet-chat">
+                        <div class="meet-chat__header">
+                            <div class="meet-chat__header-left">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                                </svg>
+                                <span>Mensajes de la reunión</span>
+                            </div>
+                            <button class="meet-chat__close" aria-label="Cerrar chat">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                </svg>
+                            </button>
                         </div>
                         
-                        <div class="form__group">
-                            <label for="email" class="form__label">Email</label>
-                            <input type="email" id="email" name="email" class="form__input" placeholder="tu@email.com" required>
-                            <span class="form__error" id="email-error"></span>
+                        <div class="meet-chat__messages" id="meet-messages">
+                            <div class="meet-chat__message meet-chat__message--teacher" data-index="0">
+                                <div class="meet-chat__avatar">
+                                    <img src="assets/images/maria-hero.png" alt="María">
+                                </div>
+                                <div class="meet-chat__bubble">
+                                    <span class="meet-chat__name">María José</span>
+                                    <span class="meet-chat__time">10:30</span>
+                                    <p class="meet-chat__text">Ciao! Come stai oggi? Pronta per la lezione?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="meet-chat__message meet-chat__message--student" data-index="1">
+                                <div class="meet-chat__bubble">
+                                    <span class="meet-chat__name">Tú</span>
+                                    <span class="meet-chat__time">10:31</span>
+                                    <p class="meet-chat__text">Ciao María! Tutto bene, grazie. Pronto per imparare!</p>
+                                </div>
+                                <div class="meet-chat__avatar meet-chat__avatar--student">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <div class="meet-chat__message meet-chat__message--teacher" data-index="2">
+                                <div class="meet-chat__avatar">
+                                    <img src="assets/images/maria-hero.png" alt="María">
+                                </div>
+                                <div class="meet-chat__bubble">
+                                    <span class="meet-chat__name">María José</span>
+                                    <span class="meet-chat__time">10:31</span>
+                                    <p class="meet-chat__text">Perfetto! Oggi parliamo del congiuntivo...</p>
+                                </div>
+                            </div>
+                            
+                            <div class="meet-chat__message meet-chat__message--teacher" data-index="3">
+                                <div class="meet-chat__avatar">
+                                    <img src="assets/images/maria-hero.png" alt="María">
+                                </div>
+                                <div class="meet-chat__bubble">
+                                    <span class="meet-chat__name">María José</span>
+                                    <span class="meet-chat__time">10:32</span>
+                                    <p class="meet-chat__text">Hoy vamos a practicar con ejemplos reales de conversación</p>
+                                </div>
+                            </div>
+                            
+                            <div class="meet-chat__message meet-chat__message--student" data-index="4">
+                                <div class="meet-chat__bubble">
+                                    <span class="meet-chat__name">Tú</span>
+                                    <span class="meet-chat__time">10:33</span>
+                                    <p class="meet-chat__text">Genial! El subjuntivo siempre me costó un poco</p>
+                                </div>
+                                <div class="meet-chat__avatar meet-chat__avatar--student">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <div class="meet-chat__message meet-chat__message--teacher" data-index="5">
+                                <div class="meet-chat__avatar">
+                                    <img src="assets/images/maria-hero.png" alt="María">
+                                </div>
+                                <div class="meet-chat__bubble">
+                                    <span class="meet-chat__name">María José</span>
+                                    <span class="meet-chat__time">10:33</span>
+                                    <p class="meet-chat__text">Non ti preoccupare, vedrai che è più facile di quello che pensi! 😊</p>
+                                </div>
+                            </div>
+                            
+                            <div class="meet-chat__typing" id="typing-indicator">
+                                <div class="meet-chat__avatar">
+                                    <img src="assets/images/maria-hero.png" alt="María">
+                                </div>
+                                <div class="meet-chat__typing-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
                         </div>
                         
-                        <div class="form__group">
-                            <label for="subject" class="form__label">Asunto</label>
-                            <select id="subject" name="subject" class="form__input form__select">
-                                <option value="">Selecciona una opción</option>
-                                <option value="italiano">Clases de Italiano</option>
-                                <option value="espanol">Clases de Español</option>
-                                <option value="traduccion">Traducciones</option>
-                                <option value="otro">Otro</option>
-                            </select>
+                        <div class="meet-chat__input">
+                            <input type="text" placeholder="Enviar mensaje a todos..." disabled>
+                            <button class="meet-chat__send" aria-label="Enviar">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                                </svg>
+                            </button>
                         </div>
-                        
-                        <div class="form__group">
-                            <label for="message" class="form__label">Mensaje</label>
-                            <textarea id="message" name="message" class="form__input form__textarea" placeholder="Contame en qué puedo ayudarte..." rows="5" required></textarea>
-                            <span class="form__error" id="message-error"></span>
-                        </div>
-                        
-                        <button type="submit" class="btn btn--primary btn--full">
-                            <span>Enviar mensaje</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
-                            </svg>
-                        </button>
-                        
-                        <div class="form__success" id="form-success">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                <path d="M22 4L12 14.01l-3-3"/>
-                            </svg>
-                            <p>¡Mensaje enviado! Te respondo pronto.</p>
-                        </div>
-                    </form>
+                    </div>
                     
                     <div class="contacto__info reveal-right">
                         <div class="contacto__card">
