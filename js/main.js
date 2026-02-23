@@ -250,6 +250,122 @@
     }
 
     // ========================================
+    // Meet Chat Animation
+    // ========================================
+    function initMeetChat() {
+        const meetChat = document.getElementById('meet-chat');
+        if (!meetChat) return;
+        
+        const messages = meetChat.querySelectorAll('.meet-chat__message');
+        const typingIndicator = document.getElementById('typing-indicator');
+        const messagesContainer = document.getElementById('meet-messages');
+        
+        let currentIndex = 0;
+        let animationRunning = false;
+        
+        function resetChat() {
+            messages.forEach(msg => {
+                msg.classList.remove('visible');
+                msg.style.display = 'none';
+            });
+            if (typingIndicator) {
+                typingIndicator.classList.remove('visible');
+            }
+            currentIndex = 0;
+            animationRunning = false;
+            if (messagesContainer) {
+                messagesContainer.scrollTop = 0;
+            }
+        }
+        
+        function showTyping() {
+            if (typingIndicator) {
+                typingIndicator.classList.add('visible');
+                scrollToBottom();
+            }
+        }
+        
+        function hideTyping() {
+            if (typingIndicator) {
+                typingIndicator.classList.remove('visible');
+            }
+        }
+        
+        function scrollToBottom() {
+            if (messagesContainer) {
+                messagesContainer.scrollTo({
+                    top: messagesContainer.scrollHeight,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        function showNextMessage() {
+            if (currentIndex >= messages.length) {
+                hideTyping();
+                setTimeout(() => {
+                    resetChat();
+                    setTimeout(startAnimation, 2000);
+                }, 4000);
+                return;
+            }
+            
+            const message = messages[currentIndex];
+            const isTeacher = message.classList.contains('meet-chat__message--teacher');
+            
+            if (isTeacher && currentIndex > 0) {
+                showTyping();
+                setTimeout(() => {
+                    hideTyping();
+                    revealMessage(message);
+                }, 1200);
+            } else {
+                revealMessage(message);
+            }
+        }
+        
+        function revealMessage(message) {
+            message.style.display = 'flex';
+            
+            requestAnimationFrame(() => {
+                message.classList.add('visible');
+                scrollToBottom();
+            });
+            
+            currentIndex++;
+            
+            const delay = 1500 + Math.random() * 1000;
+            setTimeout(showNextMessage, delay);
+        }
+        
+        function startAnimation() {
+            if (animationRunning) return;
+            animationRunning = true;
+            showNextMessage();
+        }
+        
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom > 0
+            );
+        }
+        
+        resetChat();
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !animationRunning) {
+                    setTimeout(startAnimation, 500);
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        observer.observe(meetChat);
+    }
+
+    // ========================================
     // Initialize
     // ========================================
     document.addEventListener('DOMContentLoaded', () => {
@@ -257,6 +373,7 @@
         initEventListeners();
         handleScroll();
         updateActiveLink();
+        initMeetChat();
     });
 
 })();
